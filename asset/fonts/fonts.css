@@ -1,0 +1,55 @@
+.bg-red{background: #E31D1D;}
+
+.col-red{color: #E31D1D;}
+
+.bg-white{background:  #FFF;}
+
+.bg-black{background:  #000;}
+
+.btn{ border-radius: 5px; color: #FFF; cursor: pointer; border: 1px solid #E31D1D; outline: 0;}
+
+.btn-border{border: 1px solid #E31D1D; color: #E31D1D; cursor: pointer;}
+
+.btn-md{padding: 4px 30px;}
+
+.btn-lg{padding: 10px 40px;}
+
+.category{color: #000;  font-family: Inter;   font-size: 20px; font-style: normal;  font-weight: 700; line-height: normal;}
+
+.hd-2{color: #000;  font-family: Inter;  font-size: 40px;    font-style: normal;  font-weight: 700;    line-height: normal;}
+
+.sp-hd{color: #E31D1D;    font-family: Inter;    font-size: 16px;    font-style: normal;  font-weight: 500;    line-height: normal;}
+
+.flex-center{display: flex; justify-content: center; align-items: center; gap: 10px;}
+
+.flex-start{display: flex; justify-content: start; align-items: center; gap: 10px;}
+
+.flex-start-gs{display: flex; justify-content: start; align-items: center; gap: 5px;}
+/*flex columm center */
+.flex-c-column{display: flex; flex-direction: column; gap: 10px; justify-content: center; align-items: center;}
+/*flex columm start horizontal */
+.flex-sh-column{display: flex; flex-direction: column; gap: 10px; justify-content: center; align-items: start;}
+/*flex columm start vertical */
+.flex-sv-column{display: flex; flex-direction: column; gap: 10px; justify-content: start; align-items: start;}
+
+.gp1{gap: 10px;}
+
+.gp2{gap: 20px;}
+
+.gp3{gap: 30px;}
+
+.gp4{gap: 40px;}
+
+.gp5{gap: 50px;}
+
+.fs1{font-size: 10px;}
+.fs1-2{font-size: 12px;}
+.fs1-3{font-size: 13px;}
+.fs1-4{font-size: 14px;}
+.fs1-5{font-size: 15px;}
+.fs1-6{font-size: 16px;}
+.fs1-8{font-size: 18px;}
+.fs2{font-size: 20px;}
+.fs3{font-size: 30px;}
+.fs4{font-size: 40px;}
+.fs5{font-size: 50px;}
