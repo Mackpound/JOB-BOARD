@@ -146,6 +146,7 @@ a::selection, img::selection, ::selection{
                 width: 130px;
                 height: 35px;
                 overflow: hidden;
+                border-radius: 100vw;
                 div{
                     display: flex;
                     flex-direction: column;
@@ -165,7 +166,7 @@ a::selection, img::selection, ::selection{
             button:nth-child(1):hover{
                 border: 1px solid #E31D1D;
                 color: #E31D1D;
-                border-radius: 5px;
+                border-radius: 100vw;
                 div{
                     transform: translateY(-24px);
                     span:nth-child(1){
@@ -181,7 +182,7 @@ a::selection, img::selection, ::selection{
                 border: 1px solid #E31D1D;
                 color: #FFF;
                 background-color: #E31D1D;
-                border-radius: 5px;
+                border-radius: 100vw;
                 div{
                     transform: translateY(-24px);
                     span:nth-child(1){
@@ -300,7 +301,7 @@ a::selection, img::selection, ::selection{
     scale: 0 1;
     transform-origin: left;
     animation: viewThrough linear;
-    animation-timeline: scroll();
+    animation-timeline: scroll(y);
 }
 @keyframes viewThrough {
     to{scale: 1 1;}
@@ -320,7 +321,7 @@ a::selection, img::selection, ::selection{
     scale: 1;
     opacity: 1;
     animation: fadeOut linear;
-    animation-timeline: view();
+    animation-timeline: view(y);
     animation-range: exit -500px;
     
     .main-content{
@@ -488,6 +489,9 @@ a::selection, img::selection, ::selection{
     .job-box-main{
         display: flex;
         justify-self: flex-start;
+        gap: 10px;
+        align-items: center;
+        justify-content: start;
 
     }
     .job-box-btn-layout{
