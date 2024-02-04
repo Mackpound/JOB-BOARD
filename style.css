@@ -399,7 +399,7 @@ a::selection, img::selection, ::selection {
   animation-delay: 1.3s;
 }
 .main-wrapper .main-content .listed-details span {
-  color: hsla(0, 0%, 100%, 0.2);
+  color: hsla(0, 0%, 100%, 0.01);
   background-clip: text;
   background-repeat: no-repeat;
   background-size: 0% 100%;
