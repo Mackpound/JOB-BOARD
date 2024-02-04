@@ -399,10 +399,11 @@ a::selection, img::selection, ::selection {
   animation-delay: 1.3s;
 }
 .main-wrapper .main-content .listed-details span {
-  color: hsla(0, 0%, 100%, 0.01);
+  color: rgba(247, 243, 243, 0.15);
   background-clip: text;
   background-repeat: no-repeat;
   background-size: 0% 100%;
+  text-overflow: clip;
   background-image: linear-gradient(white, rgb(239, 227, 227));
   animation-delay: 0.3s;
   animation: reveal 1s linear forwards;
@@ -692,6 +693,7 @@ a::selection, img::selection, ::selection {
   justify-content: space-between;
   padding-inline: 20%;
   margin-bottom: 5rem;
+  gap: 10px;
 }
 .pagination span {
   border-radius: 100vw;
@@ -722,4 +724,25 @@ a::selection, img::selection, ::selection {
 }
 .pagination .pagination-list li.active {
   background: #F9D6D6;
+}
+
+@media screen and (max-width: 747px) {
+  .pagination {
+    padding-inline: 2rem;
+  }
+}
+@media screen and (max-width: 447px) {
+  .pagination {
+    padding-inline: 1rem;
+  }
+  .pagination span {
+    padding: 6px 10px;
+    font-size: 10px;
+    gap: 1px;
+  }
+  .pagination .pagination-list li {
+    width: 35px;
+    height: 35px;
+    font-size: 10px;
+  }
 }/*# sourceMappingURL=style.css.map */
