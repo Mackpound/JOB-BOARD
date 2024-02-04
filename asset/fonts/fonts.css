@@ -14,11 +14,11 @@
 
 .btn-lg{padding: 10px 40px;}
 
-.category{color: #000;  font-family: Inter;   font-size: 20px; font-style: normal;  font-weight: 700; line-height: normal;}
+.category{color: #000;  font-family: SF Pro Display B;   font-size: 20px; font-style: normal;  font-weight: 1000; line-height: normal;}
 
-.hd-2{color: #000;  font-family: Inter;  font-size: 40px;    font-style: normal;  font-weight: 700;    line-height: normal;}
+.hd-2{color: #000;  font-family: SF Pro Display Text;  font-size: 40px;    font-style: normal;  font-weight: 1000;    line-height: normal;}
 
-.sp-hd{color: #E31D1D;    font-family: Inter;    font-size: 16px;    font-style: normal;  font-weight: 500;    line-height: normal;}
+.sp-hd{color: #E31D1D;    font-family: SF Pro Display;    font-size: 16px;    font-style: normal;  font-weight: 700;    line-height: normal;}
 
 .flex-center{display: flex; justify-content: center; align-items: center; gap: 10px;}
 

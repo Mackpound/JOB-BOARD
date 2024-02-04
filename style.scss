@@ -1,13 +1,13 @@
-/* font-family: 'Inter', sans-serif; */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
-/* font-family: 'Poppins', sans-serif; */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+// /* font-family: 'SF Pro Display', sans-serif; */
+// @import url('https://fonts.googleapis.com/css2?family=SF Pro Display:wght@300&display=swap');
+// /* font-family: 'Poppins', sans-serif; */
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+    font-family: SF Pro Display;
     transition: all 0.3s;
 }
  
@@ -71,10 +71,48 @@ h5::selection, h6::selection, p::selection,
 span::selection, b::selection, strong::selection,
 button::selection, i::selection, div::selection,
 a::selection, img::selection, ::selection{
-  background: #0b0b0be9;
+  background: #2f3031;
   color: aliceblue;
   padding: 20px;
 }
+
+@font-face {
+	font-family:'SF Pro Display';
+	font-style:normal;
+	// font-weight:100;
+	src:local('☺'), url("./asset/fonts/sf-Pro-regular/sf-pro-display_regular.woff2") format("woff2"), url("./asset/fonts/sf-Pro-regular/sf-pro-display_regular.woff2") format("woff"), url("./asset/fonts/sf-Pro-regular/sf-pro-display_regular.woff2") format("truetype");
+	
+}
+@font-face {
+	font-family:'SF Pro Display B';
+	font-style:normal;
+	// font-weight:100;
+	src:local('☺'), url("./asset/fonts/sf-Pro-regular/sf-pro-display_semibold.woff2") format("woff2"), url("./asset/fonts/sf-Pro-regular/sf-pro-display_semibold.woff2") format("woff"), url("./asset/fonts/sf-Pro-regular/sf-pro-display_semibold.woff2") format("truetype");
+	
+}
+@font-face {
+	font-family:'SF Pro Display SB';
+	font-style:normal;
+	// font-weight:100;
+	src:local('☺'), url("./asset/fonts/sf-Pro-semibold/sf-pro-icons_semibold.woff2") format("woff2"), url("./asset/fonts/sf-Pro-semibold/sf-pro-icons_semibold.woff2") format("woff"), url("./asset/fonts/sf-Pro-semibold/sf-pro-icons_semibold.woff2") format("truetype");
+	
+}
+@font-face {
+	font-family:'SF Pro Display Text';
+	font-style:normal;
+	// font-weight:100;
+	src:local('☺'), url("./asset/fonts/sf-Pro-text/sf-pro-text_regular.woff2") format("woff2"), url("./asset/fonts/sf-Pro-text/sf-pro-text_regular.woff2") format("woff"), url("./asset/fonts/sf-Pro-text/sf-pro-text_regular.woff2") format("truetype");
+	
+}
+@font-face {
+	font-family:'SF Pro Display Text B';
+	font-style:normal;
+	// font-weight:100;
+	src:local('☺'), url("./asset/fonts/sf-Pro-text/sf-pro-text_semibold.woff2") format("woff2"), url("./asset/fonts/sf-Pro-text/sf-pro-text_semibold.woff2") format("woff"), url("./asset/fonts/sf-Pro-text/sf-pro-text_semibold.woff2") format("truetype");
+	
+}
+
+
 
 
 // ================
@@ -113,7 +151,7 @@ a::selection, img::selection, ::selection{
                 display: flex;
                 width: 100%;
                 // background: #000;
-                gap: 20px;
+                gap: 10px;
                 justify-content: space-around;
                 align-items: center;
 
@@ -122,7 +160,7 @@ a::selection, img::selection, ::selection{
                     a{
                         font-style: normal;
                         font-size: 16px;
-                        font-family: Inter;
+                        font-family: SF Pro Display B;
                         color: #000;
                     }
                     a:hover{
@@ -134,6 +172,21 @@ a::selection, img::selection, ::selection{
         @media (width < 897px) {
             .nav-bar{
                 width: 60%;
+                ul{
+                    li{
+                        a{font-size: 14px;}
+                    }
+                }
+            }
+        }
+        @media (width < 397px) {
+            .nav-bar{
+                width: 60%;
+                ul{
+                    li{
+                        a{font-size: 10px;}
+                    }
+                }
             }
         }
 
@@ -218,6 +271,7 @@ a::selection, img::selection, ::selection{
         justify-content: end;
         padding: 0 5%;
         opacity: 0.2;
+        z-index: 10;
         transform: translateY(70px);
         animation: popIn 0.9s ease forwards;
         .fixed-cover{
@@ -231,6 +285,7 @@ a::selection, img::selection, ::selection{
             width: 130px;
             height: 35px;
             overflow: hidden;
+            border-radius: 100vw;
             div{
                 display: flex;
                 flex-direction: column;
@@ -250,7 +305,7 @@ a::selection, img::selection, ::selection{
         button:nth-child(1):hover{
             border: 1px solid #E31D1D;
             color: #E31D1D;
-            border-radius: 5px;
+            border-radius: 100vw;
             div{
                 transform: translateY(-24px);
                 span:nth-child(1){
@@ -267,7 +322,7 @@ a::selection, img::selection, ::selection{
             color: #FFF;
             // background-image: conic-gradient( red, #ff2888, #e31d1d);
             background-color: #E31D1D;
-            border-radius: 5px;
+            border-radius: 100vw;
             div{
                 transform: translateY(-24px);
                 span:nth-child(1){
@@ -279,6 +334,23 @@ a::selection, img::selection, ::selection{
             }
         }
 
+    }
+    .mask{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: -1;
+        -webkit-mask: linear-gradient(
+            transparent,
+            white 60%,
+            white 100%,
+            transparent
+        );
+        background: #fff;
+        mask: linear-gradient(transparent, white 60%, white 100%, transparent);
+     
     }
     @keyframes popIn{
         0%{
@@ -338,10 +410,10 @@ a::selection, img::selection, ::selection{
             gap: 10px;
             align-items: center;
             padding: 3.5rem;
-            span{
+            h6{
                 color: #FFF;
                 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-                font-family: Inter;
+                font-family: SF Pro Display;
                 font-size: 20px;
                 font-style: normal;
                 font-weight: 600;
@@ -351,17 +423,35 @@ a::selection, img::selection, ::selection{
                 color: #FFF;
                 text-align: center;
                 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-                font-family: Inter;
+                font-family: SF Pro Display B;
                 font-size: 50px;
                 font-style: normal;
-                font-weight: 900;
+                font-weight: 1000;
                 line-height: normal;
-                scale: 0 1;
-                animation: zoomOut 0.3s linear forwards;
+                scale: 1 1;
+                // animation: zoomOut 0.3s linear forwards;
             }
-            @keyframes zoomOut {
-                to{scale: 1 1;}
+            // @keyframes zoomOut {
+            //     to{scale: 1 1;}
+            // }
+            h1 span{
+                animation-delay: 1.3s;
             }
+
+            span{
+                color: hsl(0 0% 100% / 0.2);
+                background-clip: text;
+                background-repeat: no-repeat;
+                background-size: 0% 100%;
+                background-image: linear-gradient(white, rgb(239, 227, 227));
+                animation-delay: 0.3s;
+                animation: reveal 1s linear forwards;
+            }
+            @keyframes reveal {
+                to{background-size: 100% 100%;}
+            }
+            
+
             form{
                 margin-top: 16px;
                 display: flex;
@@ -371,24 +461,30 @@ a::selection, img::selection, ::selection{
                 gap: 20px;
 
                 div{
+                    position: relative;
                     width: 330px;
                     border-radius: 10px;
                     border: 1px solid #FFF;
                     display: flex;
-                    padding:  8px 20px;
-                    // flex-direction: column;
+                    overflow: hidden;
                     align-items: center;
-                    justify-content: center;
+                    justify-content: start;
                     input{
-                        width: 90%;
+                        width: 100%;
                         border: 0;
                         outline: 0;
                         font-size: 15px;
                         color: #FFF;
+                        padding:  8px 50px 8px 20px;
                         background-color: transparent;
                     }
                     input::placeholder{
                         font-size: 13px;
+                    }
+                    img{
+                        position: absolute;
+                        top: 25%;
+                        right: 15px;
                     }
                 }
                 button{
@@ -405,6 +501,11 @@ a::selection, img::selection, ::selection{
         }
     }
 }
+// @media screen and (max-width: 642px) {
+//     .main-wrapper{
+//         background-size: cover;
+//     }
+// }
 @keyframes fadeOut {
     to{background: linear-gradient(10deg, rgba(0, 0, 0) 10%, rgba(0, 0, 0, 0.70) 100%), url(./asset/images/banner/signup-banner.png) center  no-repeat;
         background-size: cover;
@@ -423,6 +524,7 @@ a::selection, img::selection, ::selection{
     text-align: center;
  .category-wrapper{
     margin-bottom: 40px;
+    padding-inline: 20px;
  }
 .category-content{
     width: 80%;
@@ -430,12 +532,23 @@ a::selection, img::selection, ::selection{
     gap: 40px;
     // mask: transparent, white;
     grid-template-columns: auto auto auto auto;
+    -webkit-mask: linear-gradient(
+        90deg,
+        transparent,
+        white 20%,
+        white 80%,
+        transparent
+    );
+    background: #fff;
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+
+
     .content-layout{
         display: flex;
         flex-direction: column;
         gap: 10px;
         align-items: center;
-
+       
         .svg{
             border-radius: 10px;
             border: 1px solid #E9E7E7;
@@ -451,20 +564,25 @@ a::selection, img::selection, ::selection{
     }
     // flex-wrap: wrap;
 }
-@media (width < 707px) {
+@media (width < 1005px) {
     .category-content{
         display: flex;
+        width: 100%;
         flex-wrap: wrap;
         justify-content: center;
         align-items: baseline;
-        // background: #000;
+        padding: 10px;
+        gap: 10px;
         .content-layout{
-            width: 140px;
+            width: 120px;
             .svg{
+                padding: 10px;
                 img{
                     width: 40px;
                 }
             }
+            span{font-size: 13px;}
+            p{font-size: 10px;}
         }
     }
 }
@@ -473,13 +591,15 @@ a::selection, img::selection, ::selection{
 
 .job-box-wrapper{
     width: 100%;
+    margin-bottom: 4rem;
 }
 .job-box{
     display: flex;
+    // flex-shrink: 4;
     width: 80%;
     align-items: center;
     justify-content: space-between;
-    gap: 50px;
+    gap: 10px;
     border-radius: 10px;
     background: #FDEDED;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -487,15 +607,188 @@ a::selection, img::selection, ::selection{
     padding: 20px;
 
     .job-box-main{
+        width: 70%;
         display: flex;
         justify-self: flex-start;
         gap: 10px;
         align-items: center;
         justify-content: start;
-
+        .job-box-logo{
+            img{
+                width: 100%;
+                min-width: 50px;
+                pointer-events: none;
+            }
+        }
+       
+        .job-box-content{
+            position: relative;
+            flex-direction: column;
+            display: flex;
+            gap: 5px;
+            .job-name{
+                width: 90%;
+                overflow: hidden;
+                display: -webkit-box;
+                font-weight: 600;
+                line-clamp: 1;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                text-align: start;
+                cursor: pointer;
+                
+            }
+            .job-view{
+                opacity: 0;
+                position: absolute;
+                top: -8px;
+                transition: all 0.5s;
+                display: inline-block;
+                border-radius: 10px;
+                background: rgb(245, 238, 238);
+                padding: 5px 8px;
+                font-size: 12px;
+                text-align: center;
+                white-space: nowrap;
+                z-index: 1;
+                text-overflow: ellipsis;
+                box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+            }
+            .job-view.active{
+                opacity: 1;
+                transition: all 0.5s;
+            }
+            @media screen and (max-width: 642px) {
+                .job-view{
+                    max-width: 150%;
+                    display: block;
+                    white-space: wrap;
+                }
+            }
+            span{
+                white-space: nowrap;
+                font-size: 12px;
+                img{width: 10px;}
+                li{color: #5D5A5A;}
+            }
+            @media screen and (max-width: 442px){
+                span{
+                    font-size: 10px;
+                    white-space: wrap;
+                }
+            }
+        }
     }
     .job-box-btn-layout{
         display: flex;
         justify-self: flex-end;
+        align-items: flex-start;
+        gap: 10px;
+        #heart{
+            padding: 10px;
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            // height: 20px;
+            background: #F9D6D6;
+        }
+        #heart:hover{
+            img{scale: 1.2;}
+        }
+        .job-apply-btn{
+            button{
+                width: 100%;
+                span{
+                    color: #E9E7E7;
+                }
+            }
+            button:hover{
+                background: rgb(227, 29, 29, 0.8);
+                color: #FFF;
+            }
+            span{
+                color: #000;
+                font-family: SF Pro Display;
+                font-size: 12px;
+                font-style: italic;
+                font-weight: 300;
+                line-height: normal;
+            }
+            @media screen and (max-width: 642px) {
+                    span{
+                     font-size: 10px;
+                     
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 416px){
+       .job-box-btn-layout{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 30%;
+       }
+    }
+    @media screen and (max-width: 396px){
+       .job-box-btn-layout{
+       
+        .job-apply-btn{
+            button{
+                font-size: 10px;
+                span{
+                    font-size: 8px;
+                }
+            }
+        }
+       }
     }
 } 
+@media screen and (max-width: 642px) {
+    .job-box{
+        width: 90%;
+        position: relative;
+    }
+}
+
+
+.pagination{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 20%;
+    margin-bottom: 5rem;
+
+    span{
+        border-radius: 100vw;
+        border: 1px solid #F9D6D6;
+        padding: 6px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3px;
+        text-align: center;
+        color: #E31D1D;
+    }
+
+    .pagination-list{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        li{
+            padding: 10px;
+            display: flex;
+            width: 40px;
+            height: 40px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            color: #E31D1D;
+        }
+        li.active{
+            background: #F9D6D6;
+        }
+    }
+}
