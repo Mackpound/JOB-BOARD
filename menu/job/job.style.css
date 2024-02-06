@@ -169,7 +169,7 @@
 }
 .filter{
     width: 100%;
-    position: fixed;
+    position: absolute;
     display: none;
     justify-content: space-between;
     align-items: center;
@@ -211,12 +211,12 @@
     }
     .filter{
         display: flex;
-        position: fixed;
+        position: absolute;
         top: 0;
         left: 0;
         height: 56px;
         background: #ccc;
-        z-index: 3;
+        z-index: 9;
     }
     .filter.active #toggle img{
         transform: rotate(180deg);
