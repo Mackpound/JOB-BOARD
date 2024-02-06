@@ -37,3 +37,79 @@ const applyBtn = document.querySelectorAll(".job-apply-btn > button")
             btn.innerHTML = `<span style="white-space:nowrap;"><i class="fa fa-check"></i>&nbsp;Applied</span> `
         })
       })
+
+
+       // JavaScript for carousel functionality
+        let currentIndex = 0;
+        const track = document.getElementsByClassName('testimony-wrapper')[0];
+        const items = document.querySelectorAll('.testimony-content');
+        const carouselBtn = document.querySelectorAll(".carusel-hug span")
+        const totalItems = items.length;
+
+        function goToSlide(index) {
+          currentIndex = index;
+          updateActiveButton()
+          updateCarousel();
+        }
+    
+        function updateCarousel() {
+          const newPosition = -currentIndex * 100 + '%';
+          items.forEach(item => {
+            item.style.transform = 'translateX(' + newPosition + ')';
+          })
+        }
+
+        function updateActiveButton() {
+            // Remove the "active" class from all buttons
+            carouselBtn.forEach(button => button.classList.remove('active'));
+            // Add the "active" class to the current button
+            carouselBtn[currentIndex].classList.add('active');
+          }
+        
+
+        // Automatically advance to the next slide every 1 second
+        setInterval(() => {
+          if (currentIndex < totalItems - 1) {
+            currentIndex++;
+          } else {
+            currentIndex = 0;
+          }
+          updateCarousel();
+          updateActiveButton() 
+        }, 6000);
+
+
+
+        // read more 
+        // const testimonyParent;
+        const testimonyText = document.querySelectorAll(".testimony")
+        testimonyText.forEach(testimony => {
+            let testimonyParent = testimony.parentElement;
+            let readBtn = testimonyParent.querySelector(".read-all")
+
+            if (testimony.scrollHeight > 120){
+                readBtn.classList.add("active")
+                testimony.classList.add("active")
+            }else{
+                testimony.classList.remove("active")
+                readBtn.classList.remove("active")
+            }
+
+            readBtn.addEventListener("click", function(){
+                testimony.classList.add("is-active")
+                testimony.classList.remove("active")
+                readBtn.textContent = "Read Less";
+                readBtn.classList.add("is-active")
+            })
+
+            if(readBtn.classList.contains("is-active")){
+                console.log(readBtn.innerHTML)
+                readBtn.addEventListener("click", function(){
+                    testimony.classList.add("active")
+                    testimony.classList.remove("is-active")
+                    readBtn.textContent == "Read more";
+                })
+            }
+        })
+
+   
