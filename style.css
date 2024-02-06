@@ -850,7 +850,7 @@ a::selection, img::selection, ::selection {
   position: absolute;
   bottom: 0;
   font-style: italic;
-  right: -20px;
+  right: 0;
   cursor: pointer;
 }
 .user-details .read-all.active {

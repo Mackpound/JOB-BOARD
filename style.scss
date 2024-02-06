@@ -932,7 +932,7 @@ a::selection, img::selection, ::selection{
         position: absolute;
         bottom: 0;
         font-style: italic;
-        right: -20px;
+        right: 0;
         cursor: pointer;
     }
     .read-all.active{
@@ -1169,7 +1169,6 @@ a::selection, img::selection, ::selection{
       padding: 1rem;
       width: 100%;
       border-top: 0.3px solid #ccc;
-
     }
   
   }

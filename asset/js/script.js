@@ -68,18 +68,31 @@ const applyBtn = document.querySelectorAll(".job-apply-btn > button")
         
 
         // Automatically advance to the next slide every 1 second
-        setInterval(() => {
-          if (currentIndex < totalItems - 1) {
-            currentIndex++;
-          } else {
-            currentIndex = 0;
+        let activeCarusel = true;
+
+        const indexInterval = () => {
+            if (currentIndex < totalItems - 1) {
+                currentIndex++;
+            } else {
+                currentIndex = 0;
+            }
+            updateCarousel();
+            updateActiveButton() 
+        };
+        
+        
+        
+          function currentCarusel() {
+              if(activeCarusel === false){
+                  setInterval(indexInterval, 10000)
+              }else{
+                  setInterval(indexInterval, 6000)
+              }
           }
-          updateCarousel();
-          updateActiveButton() 
-        }, 6000);
 
-
-
+          currentCarusel();
+           
+        
         // read more 
         // const testimonyParent;
         const testimonyText = document.querySelectorAll(".testimony")
@@ -99,9 +112,11 @@ const applyBtn = document.querySelectorAll(".job-apply-btn > button")
                 testimony.classList.add("is-active")
                 testimony.classList.remove("active")
                 readBtn.textContent = "Read Less";
-                readBtn.classList.add("is-active")
+                readBtn.style.color = "#CCC";
+                readBtn.classList.add("is-active");
+                activeCarusel = false;
             })
-
+            
             if(readBtn.classList.contains("is-active")){
                 console.log(readBtn.innerHTML)
                 readBtn.addEventListener("click", function(){
@@ -111,5 +126,3 @@ const applyBtn = document.querySelectorAll(".job-apply-btn > button")
                 })
             }
         })
-
-   
