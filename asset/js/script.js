@@ -87,7 +87,7 @@ const applyBtn = document.querySelectorAll(".job-apply-btn > button")
             let testimonyParent = testimony.parentElement;
             let readBtn = testimonyParent.querySelector(".read-all")
 
-            if (testimony.scrollHeight > 120){
+            if (testimony.scrollHeight > 100){
                 readBtn.classList.add("active")
                 testimony.classList.add("active")
             }else{
