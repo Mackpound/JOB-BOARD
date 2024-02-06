@@ -663,7 +663,7 @@ a::selection, img::selection, ::selection{
                 .job-view{
                     max-width: 150%;
                     display: block;
-                    white-space: wrap;
+                    white-space: normal;
                 }
             }
             span{
@@ -675,7 +675,7 @@ a::selection, img::selection, ::selection{
             @media screen and (max-width: 428px){
                 span{
                     font-size: 10px;
-                    white-space: wrap;
+                    white-space: normal;
                 }
             }
         }

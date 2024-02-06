@@ -123,14 +123,14 @@
     -webkit-user-select: none;
     cursor: pointer;
 }
-.sort-list > option:first-child{
+.sort-list > li:first-child{
     padding-block-start: 7px;
 }
-.sort-list > option:last-child{
+.sort-list > li:last-child{
     border-block-end: 1px solid transparent;
     padding-block-end: 7px;
 }
-.sort-list > option:hover{
+.sort-list > li:hover{
     background-color: #ccc;
 }
 

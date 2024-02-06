@@ -605,7 +605,7 @@ a::selection, img::selection, ::selection {
   .job-box .job-box-main .job-box-content .job-view {
     max-width: 150%;
     display: block;
-    white-space: wrap;
+    white-space: normal;
   }
 }
 .job-box .job-box-main .job-box-content span {
@@ -621,7 +621,7 @@ a::selection, img::selection, ::selection {
 @media screen and (max-width: 428px) {
   .job-box .job-box-main .job-box-content span {
     font-size: 10px;
-    white-space: wrap;
+    white-space: normal;
   }
 }
 .job-box .job-box-btn-layout {
