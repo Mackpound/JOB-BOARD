@@ -608,20 +608,20 @@ a::selection, img::selection, ::selection {
     white-space: normal;
   }
 }
-.job-box .job-box-main .job-box-content span {
+.job-box .job-box-main .job-box-content .content-detail span {
   white-space: nowrap;
   font-size: 12px;
 }
-.job-box .job-box-main .job-box-content span img {
+.job-box .job-box-main .job-box-content .content-detail span img {
   width: 10px;
 }
-.job-box .job-box-main .job-box-content span li {
+.job-box .job-box-main .job-box-content .content-detail span li {
   color: #5D5A5A;
 }
 @media screen and (max-width: 428px) {
-  .job-box .job-box-main .job-box-content span {
-    font-size: 10px;
+  .job-box .job-box-main .job-box-content .content-detail span {
     white-space: normal;
+    font-size: 10px;
   }
 }
 .job-box .job-box-btn-layout {

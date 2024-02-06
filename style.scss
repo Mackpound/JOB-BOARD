@@ -666,16 +666,21 @@ a::selection, img::selection, ::selection{
                     white-space: normal;
                 }
             }
-            span{
-                white-space: nowrap;
-                font-size: 12px;
-                img{width: 10px;}
-                li{color: #5D5A5A;}
+            .content-detail{
+                span{
+                    white-space: nowrap;
+                    font-size: 12px;
+                    img{width: 10px;}
+                    li{color: #5D5A5A;}
+                }
             }
             @media screen and (max-width: 428px){
-                span{
-                    font-size: 10px;
-                    white-space: normal;
+                .content-detail{
+                    span{
+                        white-space: normal;
+                        font-size: 10px;
+                      
+                    }
                 }
             }
         }

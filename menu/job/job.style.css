@@ -113,7 +113,7 @@
     scale: 1;
     opacity: 1;
 }
-.sort-list > option{
+.sort-list > li{
     list-style: none;
     padding-block: 3px;
     padding-inline: 12px;
