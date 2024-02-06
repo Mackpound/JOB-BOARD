@@ -78,7 +78,6 @@
     position: absolute;
     top: 50px;
     width: 100%;
-    height: 100px;
     transform-origin: top left;
     opacity: 0;
     transform: scale(0.2);
@@ -185,7 +184,29 @@
 .filter > li >h6{
     margin-top: 6px;
 }
-
+.job-category > span{
+    font-family: SF Pro Display Text B;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 40px;
+    text-align: left;    
+}
+.job-type > span{
+    font-family: SF Pro Display Text;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 40px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+.job-category > select{
+    font-family: SF Pro Display Text;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    text-align: left;
+    margin-top: 20px;
+}
 .job-list-container{
     width: 80%;
 }

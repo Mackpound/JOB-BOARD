@@ -565,13 +565,14 @@ a::selection, img::selection, ::selection {
   pointer-events: none;
 }
 .job-box .job-box-main .job-box-content {
+  width: 100%;
   position: relative;
   flex-direction: column;
   display: flex;
   gap: 5px;
 }
 .job-box .job-box-main .job-box-content .job-name {
-  width: 90%;
+  width: 80%;
   overflow: hidden;
   display: -webkit-box;
   font-weight: 600;
@@ -619,6 +620,11 @@ a::selection, img::selection, ::selection {
   color: #5D5A5A;
 }
 @media screen and (max-width: 428px) {
+  .job-box .job-box-main .job-box-content .content-detail span {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 416px) {
   .job-box .job-box-main .job-box-content .content-detail span {
     white-space: normal;
     font-size: 10px;

@@ -623,12 +623,13 @@ a::selection, img::selection, ::selection{
         }
        
         .job-box-content{
+            width: 100%;
             position: relative;
             flex-direction: column;
             display: flex;
             gap: 5px;
             .job-name{
-                width: 90%;
+                width: 80%;
                 overflow: hidden;
                 display: -webkit-box;
                 font-weight: 600;
@@ -677,9 +678,15 @@ a::selection, img::selection, ::selection{
             @media screen and (max-width: 428px){
                 .content-detail{
                     span{
+                        font-size: 10px;
+                    }
+                }
+            }
+            @media screen and (max-width: 416px){
+                .content-detail{
+                    span{
                         white-space: normal;
                         font-size: 10px;
-                      
                     }
                 }
             }
