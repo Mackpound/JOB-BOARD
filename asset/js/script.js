@@ -34,6 +34,7 @@ for (let i = 0; i < jobNames.length; i++){
 const applyBtn = document.querySelectorAll(".job-apply-btn > button")
       applyBtn.forEach(btn => {
         btn.addEventListener("click", function(){
+            window.location.href = "../../menu/job/job-descrip.html"
             btn.innerHTML = `<span style="white-space:nowrap;"><i class="fa fa-check"></i>&nbsp;Applied</span> `
         })
       })

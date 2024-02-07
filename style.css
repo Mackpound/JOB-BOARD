@@ -143,7 +143,7 @@ a::selection, img::selection, ::selection {
 #page-header .nav-bar ul li a {
   font-style: normal;
   font-size: 16px;
-  font-family: SF Pro Display B;
+  font-family: SF Pro Display Text B;
   color: #000;
 }
 #page-header .nav-bar ul li a:hover {
@@ -378,7 +378,7 @@ a::selection, img::selection, ::selection {
 .main-wrapper .main-content .listed-details h6 {
   color: #FFF;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  font-family: SF Pro Display;
+  font-family: SF Pro Display Text;
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
@@ -388,7 +388,7 @@ a::selection, img::selection, ::selection {
   color: #FFF;
   text-align: center;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  font-family: SF Pro Display B;
+  font-family: SF Pro Display Text B;
   font-size: 50px;
   font-style: normal;
   font-weight: 1000;

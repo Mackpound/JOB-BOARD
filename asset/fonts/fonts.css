@@ -7,8 +7,11 @@
 .bg-black{background:  #000;}
 
 .btn{ border-radius: 5px; color: #FFF; cursor: pointer; border: 1px solid #E31D1D; outline: 0;}
+.bbtn{ border-radius: 5px; color: #FFF; cursor: pointer; border: 1px solid #000; outline: 0;}
 
-.btn-border{border: 1px solid #E31D1D; color: #E31D1D; cursor: pointer;}
+.btn-border{border: 1px solid #E31D1D; color: #E31D1D; cursor: pointer; background: transparent; outline: 0; border-radius: 5px; padding-block: 8px;}
+
+.radius10{border-radius: 10px;}
 
 .btn-md{padding: 4px 30px;}
 
