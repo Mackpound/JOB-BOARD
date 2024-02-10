@@ -127,3 +127,16 @@ const applyBtn = document.querySelectorAll(".job-apply-btn > button")
                 })
             }
         })
+
+ // Extend classList with a custom method to check if any of the provided classes exist in the list
+DOMTokenList.prototype.containsAny = function(classes) {
+    return Array.from(classes).some(cls => this.contains(cls));
+};
+
+// Load all images eagerly
+document.addEventListener("DOMContentLoaded", function() {
+    var images = document.querySelectorAll("img");
+    images.forEach(function(img) {
+        img.loading = "eager";
+    });
+});

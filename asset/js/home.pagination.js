@@ -13,7 +13,7 @@ const jobBoxes = [
         salary: "$40",
         jobYear: "2 - 4years",
         jobPosted: "Any",
-        logoSrc: "../../asset/images/logo-banners/GTbank.png"
+        logoSrc: "../asset/images/logo-banners/GTbank.png"
     },
     {
         className: "custom-class2",
@@ -23,7 +23,7 @@ const jobBoxes = [
         salary: "$50",
         jobYear: "1 - 2years",
         jobPosted: "4-days",
-        logoSrc: "../../asset/images/logo-banners/upwork.png"
+        logoSrc: "../asset/images/logo-banners/upwork.png"
     },
     {
         className: "custom-class2",
@@ -33,7 +33,7 @@ const jobBoxes = [
         salary: "$40",
         jobYear: "4-10years",
         jobPosted: "2-days",
-        logoSrc: "../../asset/images/logo-banners/microsoft.png"
+        logoSrc: "../asset/images/logo-banners/microsoft.png"
     },
     {
         className: "custom-class2",
@@ -43,7 +43,7 @@ const jobBoxes = [
         salary: "$18",
         jobYear: "10-20years",
         jobPosted: "1-week",
-        logoSrc: "../../asset/images/logo-banners/reliance.png"
+        logoSrc: "../asset/images/logo-banners/reliance.png"
     },
     {
         className: "custom-class2",
@@ -53,7 +53,7 @@ const jobBoxes = [
         salary: "$18",
         jobYear: "10-20years",
         jobPosted: "1-week",
-        logoSrc: "../../asset/images/logo-banners/reliance.png"
+        logoSrc: "../asset/images/logo-banners/reliance.png"
     },
     {
         className: "custom-class2",
@@ -63,7 +63,7 @@ const jobBoxes = [
         salary: "$18",
         jobYear: "10-20years",
         jobPosted: "1-week",
-        logoSrc: "../../asset/images/logo-banners/reliance.png"
+        logoSrc: "../asset/images/logo-banners/reliance.png"
     },
     {
         className: "custom-class2",
@@ -73,7 +73,7 @@ const jobBoxes = [
         salary: "$18",
         jobYear: "10-20years",
         jobPosted: "1-week",
-        logoSrc: "../../asset/images/logo-banners/reliance.png"
+        logoSrc: "../asset/images/logo-banners/reliance.png"
     },
     {
         className: "custom-class2",
@@ -83,7 +83,7 @@ const jobBoxes = [
         salary: "$18",
         jobYear: "10-20years",
         jobPosted: "1-week",
-        logoSrc: "../../asset/images/logo-banners/reliance.png"
+        logoSrc: "../asset/images/logo-banners/reliance.png"
     },
 ]
 
@@ -156,11 +156,11 @@ function createJobBoxElement(jobData) {
                 <h6 class="fs1-5 job-name">${jobData.jobName}</h6>
                 <div class="content-detail flex-start">
                     <span class="flex-start-gs">
-                        <img src="../../asset/images/svg/grey-location.svg" alt="">
+                        <img src="../asset/images/svg/grey-location.svg" alt="">
                         <li class="list-unstyled">${jobData.location}</li>
                     </span>
                     <span class="flex-start-gs">
-                        <img src="../../asset/images/svg/grey-clock.svg" alt="">
+                        <img src="../asset/images/svg/grey-clock.svg" alt="">
                         <li class="list-unstyled">${jobData.jobType}</li>
                     </span>
                     <span class="flex-start-gs">
@@ -172,9 +172,9 @@ function createJobBoxElement(jobData) {
             </div>
         </div>
         <div class="job-box-btn-layout ">
-            <span id="heart"><img src="../../asset/images/svg/heart-vector.svg" alt=""></span>
+            <span id="heart"><img src="../asset/images/svg/heart-vector.svg" alt=""></span>
             <div class="job-apply-btn flex-sv-column">
-                <button class="btn bg-red" onclick="window.location.href='../../menu/job/job-descrip.html';">Apply</button>
+                <button class="btn bg-red" onclick="window.location.href='../menu/job/job-descrip.html';">Apply</button>
                 <span>Deadline: 28 Jan, 2024</span>
             </div>
         </div>
