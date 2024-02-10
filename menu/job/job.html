@@ -101,27 +101,27 @@
                                             <span class="h5">Job Categories</span>
                                             <select name="" id="" class="form-select form-select-lg mb-3" aria-label=".form-select-lg">
                                               <option selected>All Categories</option>
-                                              <option value="1">Full Time</option>
-                                              <option value="2">Part Time</option>
-                                              <option value="3">Remote</option>
+                                              <option value="1">Job Type</option>
+                                              <option value="2">Job Location</option>
+                                              <option value="3">Posted within</option>
                                           </select>
                                           <div class="job-type">
                                               <span class="h5">Job Type</span>
                                               <div class="_form">
-                                                  <label class="c-check">Full Time
-                                                      <input type="checkbox">
+                                                  <label class="c-check" for="inRadioOption1">Full Time
+                                                      <input type="checkbox" name="inRadioOptions" id="inRadioOption1" onclick="handleCheckboxClick(this)" data-type>
                                                       <span class="checkmark"><i class="fa-solid fa-check"></i></span>
                                                   </label>
-                                                  <label class="c-check">Part Time
-                                                      <input type="checkbox" checked>
+                                                  <label class="c-check" for="inRadioOption2">Part Time
+                                                      <input type="checkbox" name="inRadioOptions" id="inRadioOption2" onclick="handleCheckboxClick(this)" data-type>
                                                       <span class="checkmark"><i class="fa-solid fa-check"></i></span>
                                                   </label>
-                                                  <label class="c-check">Remote
-                                                      <input type="checkbox">
+                                                  <label class="c-check" for="inRadioOption3">Remote
+                                                      <input type="checkbox" name="inRadioOptions" id="inRadioOption3" onclick="handleCheckboxClick(this)" data-type>
                                                       <span class="checkmark"><i class="fa-solid fa-check"></i></span>
                                                   </label>
-                                                  <label class="c-check">Freelance
-                                                      <input type="checkbox">
+                                                  <label class="c-check" for="inRadioOption4">Freelance
+                                                      <input type="checkbox" name="inRadioOptions" id="inRadioOption4" onclick="handleCheckboxClick(this)" data-type>
                                                       <span class="checkmark"><i class="fa-solid fa-check"></i></span>
                                                   </label>
                                               </div>
@@ -129,29 +129,30 @@
                                           </div>
                                           <div class="job-category">
                                             <span class="h5">Job Location</span>
-                                            <select name="" id="" class="form-select form-select-lg mb-3" aria-label=".form-select-lg">
-                                              <option selected>Lagos</option>
-                                              <option value="1">Abuja</option>
-                                              <option value="2">Portacourt</option>
-                                              <option value="3">Dubai</option>
+                                            <select name="" id="locationFilter" class="form-select form-select-lg mb-3" aria-label=".form-select-lg">
+                                              <option selected value="">All</option>
+                                              <option value="Lagos">Lagos</option>
+                                              <option value="Abuja">Abuja</option>
+                                              <option value="Portacourt">Portacourt</option>
+                                              <option value="Dubai">Dubai</option>
                                           </select>
                                           <div class="job-type">
                                               <span class="h5">Experience</span>
                                              <div class="_form2">
-                                              <label class="c-check">1 - 2years
-                                                  <input type="radio" name="exampleRadioOptions" id="exampleRadio1" value="option1">
+                                              <label class="c-check" for="exampleRadio1">1 - 2years
+                                                  <input type="checkbox" name="exampleRadioOptions" id="exampleRadio1" value="option1" onclick="handleCheckboxClick2(this)" data-expirence>
                                                   <span class="checkmark"><i class="fa-solid fa-check"></i></span>
                                               </label>
-                                              <label class="c-check">2 - 4years
-                                                  <input type="radio" checked name="exampleRadioOptions" id="exampleRadio2" value="option2">
+                                              <label class="c-check" for="exampleRadio2">2 - 4years
+                                                  <input type="checkbox" name="exampleRadioOptions" id="exampleRadio2" value="option2" onclick="handleCheckboxClick2(this)" data-expirence>
                                                   <span class="checkmark"><i class="fa-solid fa-check"></i></span>
                                               </label>
-                                              <label class="c-check">4 - 10years
-                                                  <input type="radio" name="exampleRadioOptions" id="exampleRadio3" value="option3">
+                                              <label class="c-check" for="exampleRadio3">4 - 10years
+                                                  <input type="checkbox" name="exampleRadioOptions" id="exampleRadio3" value="option3" onclick="handleCheckboxClick2(this)" data-expirence>
                                                   <span class="checkmark"><i class="fa-solid fa-check"></i></span>
                                               </label>
-                                              <label class="c-check">10 - 20years
-                                                  <input type="radio" name="exampleRadioOptions" id="exampleRadio4" value="option4">
+                                              <label class="c-check" for="exampleRadio4">10 - 20years
+                                                  <input type="checkbox" name="exampleRadioOptions" id="exampleRadio4" value="option4" onclick="handleCheckboxClick2(this)" data-expirence>
                                                   <span class="checkmark"><i class="fa-solid fa-check"></i></span>
                                               </label>
                                              </div>
@@ -162,20 +163,20 @@
                                           <div class="job-type">
                                               <!-- <span class="h5">Experience</span> -->
                                               <div class="_form">
-                                                 <label class="c-check">Any
-                                                  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                                 <label class="c-check" for="inlineRadio1">Any
+                                                  <input type="checkbox" name="inlineRadioOptions" id="inlineRadio1" value="option1" onclick="handleCheckboxClick3(this)" data-posted>
                                                   <span class="checkmark"><i class="fa-solid fa-check"></i></span>
                                               </label>
-                                              <label class="c-check">2 days
-                                                  <input type="radio" checked name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                              <label class="c-check" for="inlineRadio2">2 days
+                                                  <input type="checkbox" name="inlineRadioOptions" id="inlineRadio2" value="option2" onclick="handleCheckboxClick3(this)" data-posted>
                                                   <span class="checkmark"><i class="fa-solid fa-check"></i></span>
                                               </label>
-                                              <label class="c-check">4 days
-                                                  <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                              <label class="c-check" for="inlineRadio3">4 days
+                                                  <input type="checkbox" name="inlineRadioOptions" id="inlineRadio3" value="option3" onclick="handleCheckboxClick3(this)" data-posted>
                                                   <span class="checkmark"><i class="fa-solid fa-check"></i></span>
                                               </label>
-                                              <label class="c-check">1 week
-                                                  <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+                                              <label class="c-check" for="inlineRadio4">1 week
+                                                  <input type="checkbox" name="inlineRadioOptions" id="inlineRadio4" value="option4" onclick="handleCheckboxClick3(this)" data-posted>
                                                   <span class="checkmark"><i class="fa-solid fa-check"></i></span>
                                               </label>
                                               </div>
@@ -187,7 +188,9 @@
                                               <!-- <span class="h5">Experience</span> -->
                                               <div class="_form">
                                                  <label class="range">
-                                                  <input type="range" min="0" max="100" id="myRange">
+                                                    <input type="range" id="myRange" value="0" class="salaryRange" min="0" max="100">
+                                                  <span id="minSalaryValue"></span> - <span id="maxSalaryValue"></span>
+                                                  <span id="default">Default</span>
                                               </label>
                                               </div>
                                           </div>
@@ -197,234 +200,15 @@
                             </div>
 
                             <div class="job-list-container">
-                                <div class="job-box-wrapper flex-c-column gp2">
-                                    <div class="job-box">
-                                        <div class="job-box-main">
-                                            <div class="job-box-logo flex-start">
-                                                <img src="../../asset/images/logo-banners/GTbank.png" alt="logo">
-                                            </div>
-                                                <div class="job-box-content flex-sh-column">
-                                                    <h6 class="fs1-5 job-name">Software Engineer</h6>
-                                                    <p class="job-view" id="job-view"></p>
-                                                    <div class="content-detail flex-start">
-                                                        <span class="flex-start-gs">
-                                                            <img src="../../asset/images/svg/grey-location.svg" alt="">
-                                                            <li class="list-unstyled">Lagos, state</li>
-                                                        </span>
-                                                        <span class="flex-start-gs">
-                                                            <img src="../../asset/images/svg/grey-clock.svg" alt="">
-                                                            <li class="list-unstyled">Part-Time</li>
-                                                        </span>
-                                                        <span class="flex-start-gs">
-                                                            <li class="list-unstyled">$48 - 50/hour</li>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="job-box-btn-layout ">
-                                                <span id="heart"><img src="../../asset/images/svg/heart-vector.svg" alt=""></span>
-                                                <div class="job-apply-btn flex-sv-column">
-                                                    <button class="btn bg-red">Apply</button>
-                                                    <span>Deadline: 28 Jan, 2024</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    <div class="job-box">
-                                        <div class="job-box-main">
-                                            <div class="job-box-logo flex-start">
-                                                <img src="../../asset/images/logo-banners/GTbank.png" alt="logo">
-                                            </div>
-                                                <div class="job-box-content flex-sh-column">
-                                                    <h6 class="fs1-5 job-name">Software Engineer</h6>
-                                                    <p class="job-view" id="job-view"></p>
-                                                    <div class="content-detail flex-start">
-                                                        <span class="flex-start-gs">
-                                                            <img src="../../asset/images/svg/grey-location.svg" alt="">
-                                                            <li class="list-unstyled">Lagos, state</li>
-                                                        </span>
-                                                        <span class="flex-start-gs">
-                                                            <img src="../../asset/images/svg/grey-clock.svg" alt="">
-                                                            <li class="list-unstyled">Part-Time</li>
-                                                        </span>
-                                                        <span class="flex-start-gs">
-                                                            <li class="list-unstyled">$48 - 50/hour</li>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="job-box-btn-layout ">
-                                                <span id="heart"><img src="../../asset/images/svg/heart-vector.svg" alt=""></span>
-                                                <div class="job-apply-btn flex-sv-column">
-                                                    <button class="btn bg-red">Apply</button>
-                                                    <span>Deadline: 28 Jan, 2024</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    <div class="job-box">
-                                        <div class="job-box-main">
-                                            <div class="job-box-logo flex-start">
-                                                <img src="../../asset/images/logo-banners/GTbank.png" alt="logo">
-                                            </div>
-                                                <div class="job-box-content flex-sh-column">
-                                                    <h6 class="fs1-5 job-name">Software Engineer</h6>
-                                                    <p class="job-view" id="job-view"></p>
-                                                    <div class="content-detail flex-start">
-                                                        <span class="flex-start-gs">
-                                                            <img src="../../asset/images/svg/grey-location.svg" alt="">
-                                                            <li class="list-unstyled">Lagos, state</li>
-                                                        </span>
-                                                        <span class="flex-start-gs">
-                                                            <img src="../../asset/images/svg/grey-clock.svg" alt="">
-                                                            <li class="list-unstyled">Part-Time</li>
-                                                        </span>
-                                                        <span class="flex-start-gs">
-                                                            <li class="list-unstyled">$48 - 50/hour</li>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="job-box-btn-layout ">
-                                                <span id="heart"><img src="../../asset/images/svg/heart-vector.svg" alt=""></span>
-                                                <div class="job-apply-btn flex-sv-column">
-                                                    <button class="btn bg-red">Apply</button>
-                                                    <span>Deadline: 28 Jan, 2024</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    <div class="job-box">
-                                        <div class="job-box-main">
-                                            <div class="job-box-logo flex-start">
-                                                <img src="../../asset/images/logo-banners/GTbank.png" alt="logo">
-                                            </div>
-                                                <div class="job-box-content flex-sh-column">
-                                                    <h6 class="fs1-5 job-name">Software Engineer</h6>
-                                                    <p class="job-view" id="job-view"></p>
-                                                    <div class="content-detail flex-start">
-                                                        <span class="flex-start-gs">
-                                                            <img src="../../asset/images/svg/grey-location.svg" alt="">
-                                                            <li class="list-unstyled">Lagos, state</li>
-                                                        </span>
-                                                        <span class="flex-start-gs">
-                                                            <img src="../../asset/images/svg/grey-clock.svg" alt="">
-                                                            <li class="list-unstyled">Part-Time</li>
-                                                        </span>
-                                                        <span class="flex-start-gs">
-                                                            <li class="list-unstyled">$48 - 50/hour</li>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="job-box-btn-layout ">
-                                                <span id="heart"><img src="../../asset/images/svg/heart-vector.svg" alt=""></span>
-                                                <div class="job-apply-btn flex-sv-column">
-                                                    <button class="btn bg-red">Apply</button>
-                                                    <span>Deadline: 28 Jan, 2024</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    <div class="job-box">
-                                        <div class="job-box-main">
-                                            <div class="job-box-logo flex-start">
-                                                <img src="../../asset/images/logo-banners/GTbank.png" alt="logo">
-                                            </div>
-                                                <div class="job-box-content flex-sh-column">
-                                                    <h6 class="fs1-5 job-name">Software Engineer</h6>
-                                                    <p class="job-view" id="job-view"></p>
-                                                    <div class="content-detail flex-start">
-                                                        <span class="flex-start-gs">
-                                                            <img src="../../asset/images/svg/grey-location.svg" alt="">
-                                                            <li class="list-unstyled">Lagos, state</li>
-                                                        </span>
-                                                        <span class="flex-start-gs">
-                                                            <img src="../../asset/images/svg/grey-clock.svg" alt="">
-                                                            <li class="list-unstyled">Part-Time</li>
-                                                        </span>
-                                                        <span class="flex-start-gs">
-                                                            <li class="list-unstyled">$48 - 50/hour</li>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="job-box-btn-layout ">
-                                                <span id="heart"><img src="../../asset/images/svg/heart-vector.svg" alt=""></span>
-                                                <div class="job-apply-btn flex-sv-column">
-                                                    <button class="btn bg-red">Apply</button>
-                                                    <span>Deadline: 28 Jan, 2024</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    <div class="job-box">
-                                        <div class="job-box-main">
-                                            <div class="job-box-logo flex-start">
-                                                <img src="../../asset/images/logo-banners/GTbank.png" alt="logo">
-                                            </div>
-                                                <div class="job-box-content flex-sh-column">
-                                                    <h6 class="fs1-5 job-name">Software Engineer</h6>
-                                                    <p class="job-view" id="job-view"></p>
-                                                    <div class="content-detail flex-start">
-                                                        <span class="flex-start-gs">
-                                                            <img src="../../asset/images/svg/grey-location.svg" alt="">
-                                                            <li class="list-unstyled">Lagos, state</li>
-                                                        </span>
-                                                        <span class="flex-start-gs">
-                                                            <img src="../../asset/images/svg/grey-clock.svg" alt="">
-                                                            <li class="list-unstyled">Part-Time</li>
-                                                        </span>
-                                                        <span class="flex-start-gs">
-                                                            <li class="list-unstyled">$48 - 50/hour</li>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="job-box-btn-layout ">
-                                                <span id="heart"><img src="../../asset/images/svg/heart-vector.svg" alt=""></span>
-                                                <div class="job-apply-btn flex-sv-column">
-                                                    <button class="btn bg-red">Apply</button>
-                                                    <span>Deadline: 28 Jan, 2024</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    <div class="job-box">
-                                        <div class="job-box-main">
-                                            <div class="job-box-logo flex-start">
-                                                <img src="../../asset/images/logo-banners/GTbank.png" alt="logo">
-                                            </div>
-                                                <div class="job-box-content flex-sh-column">
-                                                    <h6 class="fs1-5 job-name">Software Engineer</h6>
-                                                    <p class="job-view" id="job-view"></p>
-                                                    <div class="content-detail flex-start">
-                                                        <span class="flex-start-gs">
-                                                            <img src="../../asset/images/svg/grey-location.svg" alt="">
-                                                            <li class="list-unstyled">Lagos, state</li>
-                                                        </span>
-                                                        <span class="flex-start-gs">
-                                                            <img src="../../asset/images/svg/grey-clock.svg" alt="">
-                                                            <li class="list-unstyled">Part-Time</li>
-                                                        </span>
-                                                        <span class="flex-start-gs">
-                                                            <li class="list-unstyled">$48 - 50/hour</li>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="job-box-btn-layout ">
-                                                <span id="heart"><img src="../../asset/images/svg/heart-vector.svg" alt=""></span>
-                                                <div class="job-apply-btn flex-sv-column">
-                                                    <button class="btn bg-red">Apply</button>
-                                                    <span>Deadline: 28 Jan, 2024</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="pagination">
-                                        <span class="left"><img src="../../asset/images/svg/Chevron left.svg">&nbsp;Prev</span>
+                                <div id="gallery" class="gallery job-box-wrapper  gp2">
+                                    
+                                </div>
+                                    <div id="pagination" class="pagination">
+                                        <span class="leftBtn"><img src="../../asset/images/svg/Chevron left.svg">&nbsp;Prev</span>
                                         <div class="pagination-list">
-                                            <li class="page active">1</li>
-                                            <li class="page ">2</li>
-                                            <li class="page">3</li>
-                                            <li class="page">4</li>
+                                           
                                         </div>
-                                        <span class="right">Next&nbsp;<img src="../../asset/images/svg/Chevron Right.svg"></span>
+                                        <span class="rightBtn">Next&nbsp;<img src="../../asset/images/svg/Chevron Right.svg"></span>
                                     </div>
                             </div>
                         </div>
@@ -473,7 +257,7 @@
                 </div>
                </div>
           </footer>
-
+<script src="../../asset/js/pagination.js" defer></script>
 <script src="../../asset/js/script.js" defer id="styling-script"></script>
 <script src="../../menu/job/job.script.js" defer id="job-script"></script>
 <script src="../../asset/libs/bootstrap/js/bootstrap.min.js " defer></script>

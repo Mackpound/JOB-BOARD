@@ -10,7 +10,7 @@
 
  function handleSelectChange(value) {
     const selectedOption = document.getElementById('selectedOption');
-    const sortList = document.getElementById('sort-list');
+    // const sortList = document.getElementById('sort-list');
     // const options = sortList.getElementsByClassName('select-filter');
     
 
@@ -34,14 +34,6 @@
     }
   }
 
-  // Calculate the midpoint value
-  const rangeInput = document.getElementById('myRange');
-  const min = parseInt(rangeInput.min);
-  const max = parseInt(rangeInput.max);
-  const midpoint = (min + max) / 2;
-
-  // Set the value of the range input to the midpoint
-  rangeInput.value = midpoint;
 
 
   const filterClick = document.querySelector(".filter");
@@ -51,3 +43,6 @@
     wrapper.classList.toggle("active")
     filterClick.classList.toggle("active")
   })
+
+
+  

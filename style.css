@@ -534,24 +534,56 @@ a::selection, img::selection, ::selection {
   }
 }
 
-.job-box-wrapper {
+.gallery {
   width: 100%;
   margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.gallery-error {
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-family: SF Pro Display Text;
+  color: #CCC;
+}
+
+.transition-opacity {
+  transition: opacity 0.3s ease;
+}
+
+.job-box2 {
+  width: 100%;
+  align-self: start;
+  justify-self: start;
+  float: left;
 }
 
 .job-box {
-  display: flex;
   width: 80%;
+  align-self: center;
+  justify-self: center;
+  margin-inline: 10%;
+}
+
+.job-box, .job-box2 {
+  display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 10px;
   border-radius: 10px;
   background: #FDEDED;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  height: 109px;
+  height: 90px;
   padding: 20px;
 }
-.job-box .job-box-main {
+.job-box .job-box-main, .job-box2 .job-box-main {
   width: 70%;
   display: flex;
   justify-self: flex-start;
@@ -559,19 +591,19 @@ a::selection, img::selection, ::selection {
   align-items: center;
   justify-content: start;
 }
-.job-box .job-box-main .job-box-logo img {
+.job-box .job-box-main .job-box-logo img, .job-box2 .job-box-main .job-box-logo img {
   width: 100%;
   min-width: 50px;
   pointer-events: none;
 }
-.job-box .job-box-main .job-box-content {
+.job-box .job-box-main .job-box-content, .job-box2 .job-box-main .job-box-content {
   width: 100%;
   position: relative;
   flex-direction: column;
   display: flex;
   gap: 5px;
 }
-.job-box .job-box-main .job-box-content .job-name {
+.job-box .job-box-main .job-box-content .job-name, .job-box2 .job-box-main .job-box-content .job-name {
   width: 80%;
   overflow: hidden;
   display: -webkit-box;
@@ -582,7 +614,7 @@ a::selection, img::selection, ::selection {
   text-align: start;
   cursor: pointer;
 }
-.job-box .job-box-main .job-box-content .job-view {
+.job-box .job-box-main .job-box-content .job-view, .job-box2 .job-box-main .job-box-content .job-view {
   opacity: 0;
   position: absolute;
   top: -8px;
@@ -598,65 +630,85 @@ a::selection, img::selection, ::selection {
   text-overflow: ellipsis;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
 }
-.job-box .job-box-main .job-box-content .job-view.active {
+.job-box .job-box-main .job-box-content .job-view.active, .job-box2 .job-box-main .job-box-content .job-view.active {
   opacity: 1;
   transition: all 0.5s;
 }
 @media screen and (max-width: 642px) {
-  .job-box .job-box-main .job-box-content .job-view {
+  .job-box .job-box-main .job-box-content .job-view, .job-box2 .job-box-main .job-box-content .job-view {
     max-width: 150%;
     display: block;
     white-space: normal;
   }
 }
-.job-box .job-box-main .job-box-content .content-detail span {
+@media screen and (max-width: 989px) {
+  .job-box .job-box-main .job-box-content .job-year, .job-box2 .job-box-main .job-box-content .job-year {
+    opacity: 0;
+  }
+  .job-box .job-box-main .job-box-content .job-posted, .job-box2 .job-box-main .job-box-content .job-posted {
+    opacity: 0;
+  }
+  .job-box .job-box-main .job-box-content .content-detail span, .job-box2 .job-box-main .job-box-content .content-detail span {
+    white-space: normal;
+    font-family: SF Pro Display Text;
+    font-size: 12px;
+  }
+  .job-box .job-box-main .job-box-content .content-detail span img, .job-box2 .job-box-main .job-box-content .content-detail span img {
+    width: 10px;
+  }
+  .job-box .job-box-main .job-box-content .content-detail span li, .job-box2 .job-box-main .job-box-content .content-detail span li {
+    color: #5D5A5A;
+  }
+}
+.job-box .job-box-main .job-box-content .content-detail span, .job-box2 .job-box-main .job-box-content .content-detail span {
   white-space: nowrap;
+  font-family: SF Pro Display Text;
   font-size: 12px;
 }
-.job-box .job-box-main .job-box-content .content-detail span img {
+.job-box .job-box-main .job-box-content .content-detail span img, .job-box2 .job-box-main .job-box-content .content-detail span img {
   width: 10px;
 }
-.job-box .job-box-main .job-box-content .content-detail span li {
+.job-box .job-box-main .job-box-content .content-detail span li, .job-box2 .job-box-main .job-box-content .content-detail span li {
   color: #5D5A5A;
 }
 @media screen and (max-width: 428px) {
-  .job-box .job-box-main .job-box-content .content-detail span {
+  .job-box .job-box-main .job-box-content .content-detail span, .job-box2 .job-box-main .job-box-content .content-detail span {
     font-size: 10px;
   }
 }
 @media screen and (max-width: 416px) {
-  .job-box .job-box-main .job-box-content .content-detail span {
+  .job-box .job-box-main .job-box-content .content-detail span, .job-box2 .job-box-main .job-box-content .content-detail span {
     white-space: normal;
     font-size: 10px;
   }
 }
-.job-box .job-box-btn-layout {
+.job-box .job-box-btn-layout, .job-box2 .job-box-btn-layout {
   display: flex;
   justify-self: flex-end;
   align-items: flex-start;
   gap: 10px;
 }
-.job-box .job-box-btn-layout #heart {
+.job-box .job-box-btn-layout #heart, .job-box2 .job-box-btn-layout #heart {
   padding: 10px;
   border-radius: 2px;
   display: flex;
   align-items: center;
   background: #F9D6D6;
 }
-.job-box .job-box-btn-layout #heart:hover img {
+.job-box .job-box-btn-layout #heart:hover img, .job-box2 .job-box-btn-layout #heart:hover img {
   scale: 1.2;
 }
-.job-box .job-box-btn-layout .job-apply-btn button {
+.job-box .job-box-btn-layout .job-apply-btn button, .job-box2 .job-box-btn-layout .job-apply-btn button {
   width: 100%;
 }
-.job-box .job-box-btn-layout .job-apply-btn button span {
+.job-box .job-box-btn-layout .job-apply-btn button span, .job-box2 .job-box-btn-layout .job-apply-btn button span {
   color: #E9E7E7;
 }
-.job-box .job-box-btn-layout .job-apply-btn button:hover {
+.job-box .job-box-btn-layout .job-apply-btn button:hover, .job-box2 .job-box-btn-layout .job-apply-btn button:hover {
   background: rgba(227, 29, 29, 0.8);
   color: #FFF;
 }
-.job-box .job-box-btn-layout .job-apply-btn span {
+.job-box .job-box-btn-layout .job-apply-btn span, .job-box2 .job-box-btn-layout .job-apply-btn span {
   color: #000;
   font-family: SF Pro Display;
   font-size: 12px;
@@ -665,12 +717,12 @@ a::selection, img::selection, ::selection {
   line-height: normal;
 }
 @media screen and (max-width: 642px) {
-  .job-box .job-box-btn-layout .job-apply-btn span {
+  .job-box .job-box-btn-layout .job-apply-btn span, .job-box2 .job-box-btn-layout .job-apply-btn span {
     font-size: 10px;
   }
 }
 @media screen and (max-width: 416px) {
-  .job-box .job-box-btn-layout {
+  .job-box .job-box-btn-layout, .job-box2 .job-box-btn-layout {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -678,10 +730,10 @@ a::selection, img::selection, ::selection {
   }
 }
 @media screen and (max-width: 396px) {
-  .job-box .job-box-btn-layout .job-apply-btn button {
+  .job-box .job-box-btn-layout .job-apply-btn button, .job-box2 .job-box-btn-layout .job-apply-btn button {
     font-size: 10px;
   }
-  .job-box .job-box-btn-layout .job-apply-btn button span {
+  .job-box .job-box-btn-layout .job-apply-btn button span, .job-box2 .job-box-btn-layout .job-apply-btn button span {
     font-size: 8px;
   }
 }
@@ -690,6 +742,7 @@ a::selection, img::selection, ::selection {
   .job-box {
     width: 90%;
     position: relative;
+    margin-inline: 5%;
   }
 }
 .pagination {
@@ -708,6 +761,7 @@ a::selection, img::selection, ::selection {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   gap: 3px;
   text-align: center;
   color: #E31D1D;

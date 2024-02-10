@@ -590,21 +590,50 @@ a::selection, img::selection, ::selection{
 
 }
 
-.job-box-wrapper{
+.gallery{
     width: 100%;
     margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+.gallery-error{
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-family: SF Pro Display Text;
+    color: #CCC;
+}
+.transition-opacity{
+    transition: opacity 0.3s ease;
+}
+.job-box2{
+    width: 100%;
+    align-self: start;
+    justify-self: start;
+    float: left;
 }
 .job-box{
+    width: 80%;
+    align-self: center;
+    justify-self: center;
+    margin-inline: 10%;
+}
+.job-box, .job-box2{
     display: flex;
     // flex-shrink: 4;
-    width: 80%;
+    // width: 80%;
     align-items: center;
     justify-content: space-between;
     gap: 10px;
     border-radius: 10px;
     background: #FDEDED;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    height: 109px;
+    height: 90px;
     padding: 20px;
 
     .job-box-main{
@@ -667,9 +696,28 @@ a::selection, img::selection, ::selection{
                     white-space: normal;
                 }
             }
+            @media screen and (max-width: 989px) {
+               .job-year{
+                opacity: 0;
+               }
+               .job-posted{
+                opacity: 0;
+               }
+               .content-detail{
+                   span{
+                       white-space: normal;
+                       font-family: SF Pro Display Text;
+                       font-size: 12px;
+                       img{width: 10px;}
+                       li{color: #5D5A5A;}
+                   }
+               }
+               
+            }
             .content-detail{
                 span{
                     white-space: nowrap;
+                    font-family: SF Pro Display Text;
                     font-size: 12px;
                     img{width: 10px;}
                     li{color: #5D5A5A;}
@@ -761,6 +809,7 @@ a::selection, img::selection, ::selection{
     .job-box{
         width: 90%;
         position: relative;
+        margin-inline: 5%;
     }
 }
 
@@ -781,6 +830,7 @@ a::selection, img::selection, ::selection{
         display: flex;
         align-items: center;
         justify-content: center;
+        cursor: pointer;
         gap: 3px;
         text-align: center;
         color: #E31D1D;

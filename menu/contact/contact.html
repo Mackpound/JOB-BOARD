@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagination</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    .pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background-color: #007bff;
+}
+
+.pagination button:hover:not(.active) {
+  background-color: #45a049;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.gallery img {
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+}
+
+</style>
+<body>
+  <div id="pagination" class="pagination"></div>
+  <div id="gallery" class="gallery"></div>
+  <script>
+const pagination = document.getElementById('pagination');
+const gallery = document.getElementById('gallery');
+
+const totalPages = 10; // Example: Total number of pages
+let currentPage = 1;
+
+// Sample image URLs for each page
+const imageUrls = [
+  ['../../asset/images/svg/bl-clock.svg', '../../asset/images/svg/bl-location.svg', './asset/images/svg/bl-laptop.svg', './asset/images/svg/bl-keyboard.svg', './asset/images/svg/bl-smartphone.svg'],
+  ['../../asset/images/svg/bl-camera.svg', '../../asset/images/svg/bl-headphones.svg', './asset/images/svg/bl-speaker.svg', './asset/images/svg/bl-mouse.svg', './asset/images/svg/bl-usb-drive.svg'],
+  ['../../asset/images/svg/bl-car.svg', '../../asset/images/svg/bl-plane.svg', './asset/images/svg/bl-ship.svg', './asset/images/svg/bl-train.svg', './asset/images/svg/bl-truck.svg'],
+  // Add more arrays of image URLs for each page as needed
+];
+
+function renderPagination() {
+  pagination.innerHTML = '';
+
+  // Previous button
+  const prevButton = document.createElement('button');
+  prevButton.innerText = 'Prev';
+  prevButton.addEventListener('click', function() {
+    if (currentPage > 1) {
+      currentPage--;
+      renderPagination();
+      renderGallery();
+    }
+  });
+  pagination.appendChild(prevButton);
+
+  // Page buttons
+  const context = 2; // Number of pages before and after current page to display
+  for (let i = Math.max(1, currentPage - context); i <= Math.min(currentPage + context, totalPages); i++) {
+    const button = document.createElement('button');
+    button.innerText = i;
+    button.addEventListener('click', function() {
+      currentPage = i;
+      renderPagination();
+      renderGallery();
+    });
+
+    if (currentPage === i) {
+      button.classList.add('active');
+    }
+
+    pagination.appendChild(button);
+  }
+
+  // Next button
+  const nextButton = document.createElement('button');
+  nextButton.innerText = 'Next';
+  nextButton.addEventListener('click', function() {
+    if (currentPage < totalPages) {
+      currentPage++;
+      renderPagination();
+      renderGallery();
+    }
+  });
+  pagination.appendChild(nextButton);
+}
+
+function renderGallery() {
+  gallery.innerHTML = '';
+
+  const imagesPerPage = 5;
+  const startIndex = (currentPage - 1) * imagesPerPage;
+  const endIndex = Math.min(startIndex + imagesPerPage, imageUrls.length);
+
+  for (let i = startIndex; i < endIndex; i++) {
+    const img = document.createElement('img');
+    img.src = imageUrls[currentPage - 1][i % imagesPerPage];
+    img.alt = 'Image ' + (i + 1);
+    gallery.appendChild(img);
+  }
+}
+
+renderPagination();
+renderGallery();
+
+
+  </script>
+</body>
+</html>
